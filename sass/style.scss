@@ -1,0 +1,137 @@
+* {
+  font-family: "Nunito", sans-serif;
+  box-sizing: border-box;
+}
+
+%flex-row-display {
+  display: flex;
+}
+body {
+  margin: 0;
+}
+
+header {
+  padding: 0 2rem;
+  height: 80px;
+  box-shadow: rgba(33, 35, 38, 0.4) 0px 10px 10px -10px;
+}
+
+header div img {
+  width: 60px;
+  padding-left: 0.5rem;
+}
+
+header,
+nav ul {
+  @extend %flex-row-display;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  text-decoration: none;
+}
+header nav ul {
+  gap: 2rem;
+}
+
+header nav li ul {
+  display: none;
+  margin: 1rem;
+  position: absolute;
+  min-width: 10px;
+  padding: 0px;
+  list-style: none;
+  text-decoration: none;
+  background-color: white;
+}
+header nav li ul li {
+  margin: 0rem 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid;
+}
+header a {
+  text-decoration: none;
+  color: black;
+}
+
+header nav li:hover > ul {
+  display: grid;
+}
+
+main {
+  margin: 2rem 2rem 2rem 4rem;
+}
+main > p {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  color: #fa6400;
+}
+
+button {
+  align-items: center;
+  background-clip: padding-box;
+  background-color: #fa6400;
+  border: 1px solid transparent;
+  border-radius: 0rem 1rem 1rem 1rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: system-ui, -apple-system, system-ui, "Helvetica Neue", Helvetica,
+    Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 0;
+  min-height: 3rem;
+  padding: calc(0.875rem - 1px) calc(1.5rem - 1px);
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: auto;
+}
+
+button:hover,
+button:focus {
+  background-color: #fb8332;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
+button {
+  background-color: #c85000;
+  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+  transform: translateY(0);
+}
+
+.main-titles {
+  @extend %flex-row-display;
+  justify-content: space-between;
+}
+.main-titles p {
+  font-size: 3rem;
+  margin: 0;
+  font-weight: bold;
+}
+
+.main-images {
+  @extend %flex-row-display;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+}
+.main-images img {
+  width: 20rem;
+  height: 25rem;
+  object-fit: cover;
+  border-radius: 10%;
+}
